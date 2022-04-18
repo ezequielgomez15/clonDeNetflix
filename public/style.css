@@ -1,0 +1,369 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_poster:hover{
+    transform: scale(1.08);
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row_posterLarge{
+    max-height: 250px;
+}
+
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+
+.row{
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.banner{
+    background-image: url(./netflixImages/1366_2000.jpg);
+    background-size: cover;
+    object-fit: contain;
+    height: 448px;
+}
+
+.banner-contents{
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+.banner_title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner_description{
+    width: 45rem;
+    line-height: 1.3rem;
+    padding-top: 1rem;
+    font-size: .8rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+.banner_button{
+    cursor: pointer;
+    color: #e6e6e6;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: transparent;
+}
+
+.banner--fadeBottom{
+    margin-top: 145px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.61), #111);
+}
+
+.nav_logo{
+    width: 40px;
+    object-fit: contain;
+
+}
+
+.banner_buttons{
+    display: none;
+}
+
+.nav_avatar{
+    width: 45px;
+    object-fit: contain;
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    flex-wrap: wrap;
+    align-items: center;
+    /* background-image: linear-gradient(to bottom, black 0%, black 6%, rgba(0,0,0, 0.5 ) 80%, transparent 100%); */
+    background-image: linear-gradient(360deg, transparent, rgba(37,37,37,0.61), #111);
+}
+
+.nav_black{
+    background-color: #111;
+}
+
+h1 img{
+    width: 275px;
+}
+
+.genero{
+    width: 500px;
+}
+
+.genero ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.genero ul li{
+    list-style: none;
+}
+
+.play{
+    background-color: #E4E4E4;
+    color: #111;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.play:hover{
+    background-color: #BBBBBB;
+    transition: all 0.2s;
+}
+
+.iconos:hover{
+    color: #BBBBBB;
+}
+
+.nav2 ul{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.nav2 ul li{
+    list-style: none;
+}
+
+.listaNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    margin-left: 750px;
+}
+
+.listaNav img{
+    width: 35px;
+}
+
+footer{
+    height: 56px;
+    padding: 10px;
+    width: 100%;
+    background-color: #121212;
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+footer ul li img{
+    width: 32px;
+}
+
+@media only screen and (max-width: 1000px){
+    .listaNav{
+        margin-left: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .listaNav{
+        margin-left: 500px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .banner_description{
+        display: none;
+    }
+
+    .listaNav{
+        margin-left: 0px;
+    }
+
+    h1 img{
+        width: 255px;
+    }
+    
+    .banner-contents{
+        padding-top: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .genero{
+        width: 100%;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 79px;
+    }
+
+    .banner_buttons{
+        display: flex;
+    }
+
+    .banner{
+        background-position: center;
+    }
+
+    .banner--fadeBottom{
+        margin-top: 91px;
+        height: 7.4rem;
+        background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.61), #111);
+    }
+
+    .nav2 ul li{
+        font-size: 14px;
+    }
+
+    .banner-contents ul{
+        display: flex;
+        height: 30px;
+    }
+
+    .banner-contents ul li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-contents ul li button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-contents ul li img{
+        width: 22px;
+    }
+
+    .iconos{
+        font-size: 12px;
+    }
+
+    .listaNav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 130px;
+    }
+    
+    .listaNav img{
+        width: 25px;
+    }
+
+    .nav_logo{
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .listaNav{
+        margin-left: 0px;
+        padding: 0;
+    }
+
+    .banner_buttons ul li{
+        width: 100px;
+        padding-right: 45px;
+    }
+
+    .banner-contents ul{
+        width: 272px;
+    }
+
+    .genero ul li{
+        margin-left: 41px;
+    }
+
+    .genero ul{
+        margin-left: 30px;
+    }
+
+    footer{
+        display: block;
+    }
+
+    .ult{
+        margin-bottom: 55px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .genero ul{
+        margin-left: 10px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 357px){
+    .banner_buttons ul li{
+        width: 100px;
+        padding-right: 45px;
+        margin-left: 11px;
+        padding-right: 35px;
+    }
+}
+
+@media only screen and (max-width: 310px){
+    .genero ul{
+        margin: 0px;
+    }
+}
+
